@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class grocceryListProject {
+public class grocceryList {
 private static ArrayList<String> groccerylist = new ArrayList<String>();
 	
 	public static void addGrocceryItem(String item) {

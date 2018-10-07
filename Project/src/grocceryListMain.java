@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
-public class grocceryListProjectMain {
+
+public class grocceryListMain {
 	private static Scanner scanner = new Scanner(System.in);
-	private static grocceryListProject groccerylist = new grocceryListProject();
+	private static grocceryList groccerylist = new grocceryList();
 
 	public static void main(String[] args) {
   	boolean quit = false;
@@ -18,7 +19,7 @@ public class grocceryListProjectMain {
   			printInstructions();
   			break;
   		case 1:
-  			grocceryListProject.printGrocceryList();
+  			grocceryList.printGrocceryList();
   			break;
   		case 2:
   			addItem();
@@ -54,7 +55,7 @@ public class grocceryListProjectMain {
 	
 	public static void addItem() {
 		System.out.println("please enter the grocery item ");
-		grocceryListProject.addGrocceryItem(scanner.nextLine());
+		grocceryList.addGrocceryItem(scanner.nextLine());
 		
 	}
 	 public static void modifyItem() {
@@ -63,24 +64,23 @@ public class grocceryListProjectMain {
 		 scanner.nextLine();
 		 System.out.println("please enter new item name");
 		 String newitemname=scanner.nextLine();
-		 grocceryListProject.modifyGrocceryItem(currentitemname, newitemname);
+		 grocceryList.modifyGrocceryItem(currentitemname, newitemname);
 
 	 }
 	 
 	 public static void removeItem() {
 		 System.out.println("please enter the name");
 		 String itemname= scanner.nextLine();
-		 grocceryListProject.removeGrocceryItem(itemname);
+		 grocceryList.removeGrocceryItem(itemname);
 	 }
 	 public static void searchForItem() {
 		 System.out.println("please enter the item you are looking for");
 		 String searchitem= scanner.nextLine();
-		 if(grocceryListProject.onFile(searchitem)) {
-			 System.out.println("the item "+searchitem+" is in our groccery list");
+		 if(grocceryList.onFile(searchitem)) {
+			 System.out.println("the oitem"+searchitem+"is in our groccery list");
 		 }
 		 else {
 			 System.out.println(searchitem+"is not in our list");
 		 }
-		 
-	 }
+}
 }
